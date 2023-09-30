@@ -1,0 +1,86 @@
+forecast-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--surface);
+  border-radius: 20px 20px 20px 20px;
+  padding: 1.6rem 1.6rem 1.6rem 0.5rem;
+}
+
+forecast-box table .flex p {
+  font-size: 1.3rem;
+  color: var(--on-surface);
+}
+
+forecast-box table .flex {
+  display: flex;
+  align-items: center;
+}
+
+forecast-box table .flex img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Forecast Day 1 Start */
+forecast-box table .forecast-dt-1 {
+  color: var(--on-surface-variant);
+}
+
+forecast-box table .forecast-dt-1 #date {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+forecast-box table .forecast-dt-1 #day {
+  text-align: end;
+  font-size: 0.9rem;
+}
+/* Forecast Day 1 Ends */
+
+/* Forecast Day 2 Start */
+forecast-box table .forecast-dt-2 {
+  color: var(--on-surface-variant);
+}
+
+forecast-box table .forecast-dt-2 #date {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+forecast-box table .forecast-dt-2 #day {
+  text-align: end;
+  font-size: 0.9rem;
+}
+/* Forecast Day 2 Ends */
+
+/* Forecast Day 3 Start */
+forecast-box table .forecast-dt-3 {
+  color: var(--on-surface-variant);
+}
+
+forecast-box table .forecast-dt-3 #date {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+forecast-box table .forecast-dt-3 #day {
+  text-align: end;
+  font-size: 0.9rem;
+}
+/* Forecast Day 3 Ends */
+
+/* Foreacast Day 4 Start */
+forecast-box table .forecast-dt-4 {
+  color: var(--on-surface-variant);
+}
+forecast-box table .forecast-dt-4 #date {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+forecast-box table .forecast-dt-4 #day {
+  text-align: end;
+  font-size: 0.9rem;
+}
+/* Forecast Day 4 Ends */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Weather Check</title>
+    <link rel="icon" href="favicon.ico" />
+    <script defer="defer" src="bundle.js"></script>
+    <link rel="stylesheet" href="src/styles/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <header-nav></header-nav><search-bar></search-bar
+      ><use-location></use-location>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row1">
+          <weather-box></weather-box>
+          <h2 style="color: #fff; margin-top: 0.7rem">4 Day's Forecast</h2>
+          <forecast-box></forecast-box>
+        </div>
+        <div class="row2">
+          <div class="hg-box">
+            <h4>Todays Highlights</h4>
+            <div class="details">
+              <div class="row1">
+                <div class="wind-box">
+                  <h4>Wind Details</h4>
+                  <wind-details></wind-details>
+                </div>
+                <div class="temp-box">
+                  <h4>Temp Details</h4>
+                  <div class="temp-details"><temp-details></temp-details></div>
+                </div>
+                <div class="sun-box">
+                  <h4>Sunrise & Sunset</h4>
+                  <div class="sun-details"><sun-details></sun-details></div>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="hum-box">
+                  <h4>Humidity</h4>
+                  <div class="hum-details"><hum-details></hum-details></div>
+                </div>
+                <div class="pressure-box">
+                  <h4>Pressure</h4>
+                  <div class="pressure-details">
+                    <pressure-details></pressure-details>
+                  </div>
+                </div>
+                <div class="visibility-box">
+                  <h4>Visibility</h4>
+                  <div class="visibility-details">
+                    <visibility-details></visibility-details>
+                  </div>
+                </div>
+                <div class="feelsLike-box">
+                  <h4>Feels Like</h4>
+                  <div class="feelsLike-details"><fl-details></fl-details></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <loading-circle id="loadingCircle"></loading-circle>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+.weather-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem 3rem 3rem;
+  background-color: var(--surface);
+  color: #fff;
+  width: 400px;
+  height: 300px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.weather-box #des {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.weather-box .row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.weather-box .row span {
+  font-size: 3rem;
+  color: var(--on-surface);
+  margin-right: 6.4rem;
+}
+
+.weather-box .cols {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-box .cols #weather-desc {
+  color: var(--on-surface);
+  padding-bottom: 1rem;
+}
+
+.weather-box .cols #date {
+  padding-top: 1rem;
+  color: var(--on-surface-variant);
+}
+
+.weather-box .cols #date svg {
+  padding-right: 0.4rem;
+  align-items: center;
+}
+
+.weather-box .cols #loc {
+  padding-top: 0.4rem;
+  color: var(--on-surface-variant);
+}
+
+.weather-box .cols #loc svg {
+  padding-right: 0.5rem;
+  align-items: center;
+}

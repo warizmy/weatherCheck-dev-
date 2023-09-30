@@ -1,0 +1,22 @@
+use-location button {
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  color: var(--on-surface);
+  background-color: #4d3c77;
+  width: 45px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+use-location button:hover {
+  background-color: #614c97;
+  transition: 0.3s;
+}
+
+use-location button svg {
+  width: 100%;
+  height: 20px;
+}
