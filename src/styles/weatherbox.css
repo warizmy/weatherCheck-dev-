@@ -21,6 +21,11 @@
   flex-direction: row;
 }
 
+.weather-box .row .details-image img {
+  width: 5rem;
+  height: 5rem;
+}
+
 .weather-box .row span {
   font-size: 3rem;
   color: var(--on-surface);

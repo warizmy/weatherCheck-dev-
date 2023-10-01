@@ -1,3 +1,9 @@
+import imageClear from "../assets/clear.png";
+import imageClouds from "../assets/cloud.png";
+import imageHaze from "../assets/haze.png";
+import imageRain from "../assets/rain.png";
+import imageSnow from "../assets/snow.png";
+
 class WeatherBox extends HTMLElement {
   constructor() {
     super();
@@ -5,11 +11,34 @@ class WeatherBox extends HTMLElement {
 
   connectedCallback() {
     this.render();
+    this.setWeatherIcon();
   }
 
   setWeatherData(data) {
     this.weatherData = data;
     this.render();
+    this.setWeatherIcon();
+  }
+
+  setWeatherIcon() {
+    if (this.weatherData) {
+      const weatherIcon = this.querySelector(".row .details-image img");
+      const weatherDescription = this.weatherData.weather[0].main;
+
+      if (weatherIcon) {
+        if (weatherDescription == "Clear") {
+          weatherIcon.setAttribute("src", imageClear);
+        } else if (weatherDescription == "Clouds") {
+          weatherIcon.setAttribute("src", imageClouds);
+        } else if (weatherDescription == "Haze") {
+          weatherIcon.setAttribute("src", imageHaze);
+        } else if (weatherDescription == "Rain") {
+          weatherIcon.setAttribute("src", imageRain);
+        } else if (weatherDescription == "Snow") {
+          weatherIcon.setAttribute("src", imageSnow);
+        }
+      }
+    }
   }
 
   static capitalizeWeatherDescription(description) {
@@ -24,8 +53,7 @@ class WeatherBox extends HTMLElement {
       const cityName = this.weatherData.name;
       const cityCountry = this.weatherData.sys.country;
       const temperature = this.weatherData.main.temp.toFixed(0);
-      const weatherDescription = this.weatherData.weather[0].description;
-      const weatherIcon = this.weatherData.weather[0].icon;
+      const weatherDescription = this.weatherData.weather[0].main;
       const capitalizedWeatherDescription =
         WeatherBox.capitalizeWeatherDescription(weatherDescription);
 
@@ -40,7 +68,7 @@ class WeatherBox extends HTMLElement {
           <div class="row">
             <p id="temp"><span>${temperature}°c</span></p>
               <div class = "details-image">
-                <img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png" />
+                <img src="" />
               </div>
           </div>
           <div class = cols>

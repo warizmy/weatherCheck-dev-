@@ -20,6 +20,19 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 8192,
+              name: "[name].[ext]",
+              outputPath: "./src/assets/",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

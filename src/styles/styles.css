@@ -245,6 +245,11 @@ main .container .row2 {
     width: 330px;
   }
 
+  forecast-box table .flex img {
+    width: 45px;
+    height: 45px;
+  }
+
   .container .row2 .hg-box .details {
     flex-direction: column;
     gap: 2rem;
@@ -348,6 +353,20 @@ main .container .row2 {
 
   main .container .row1 .weather-box {
     width: 330px;
+  }
+
+  .weather-box .row {
+    gap: 4rem;
+  }
+
+  .weather-box .row .details-image img {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  forecast-box table .flex img {
+    width: 40px;
+    height: 40px;
   }
 
   main .container .row2 .hg-box {
