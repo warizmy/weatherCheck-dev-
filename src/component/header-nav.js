@@ -1,3 +1,5 @@
+import icon from "../assets/icon.png";
+
 class headerNav extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -6,7 +8,8 @@ class headerNav extends HTMLElement {
   render() {
     this.innerHTML = `
     <div class = "header-nav">
-      <div>
+      <div class = "header-inside">
+          <img src = ${icon}>
           <p>weathercheck</p>
       </div>
     </div>`;

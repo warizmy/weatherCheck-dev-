@@ -1,8 +1,12 @@
-.header-nav p{
+.header-inside {
+  display: flex;
+  cursor: default;
+}
+
+.header-nav p {
   color: #ffff;
-  cursor: pointer;
   text-align: center;
-  padding: 0.3rem 1rem 0.3rem 1rem;
+  padding: 0.3rem 1rem 0.3rem 0.2rem;
   font-size: 1.5rem;
   font-weight: 700;
 }
