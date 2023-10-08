@@ -13,7 +13,7 @@ class ForeCast extends HTMLElement {
     this.render();
   }
 
-  setForecastData(data) {
+  setForecastData(data) { 
     this.forecastData = data;
     this.render();
   }
