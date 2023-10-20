@@ -9,7 +9,6 @@ class headerNav extends HTMLElement {
     this.innerHTML = `
     <div class = "header-nav">
       <div class = "header-inside">
-          <img src = ${icon}>
           <p>weathercheck</p>
       </div>
     </div>`;
