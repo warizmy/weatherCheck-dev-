@@ -1,8 +1,4 @@
 class WindDetails extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -34,9 +30,9 @@ class WindDetails extends HTMLElement {
     </div>   
      `;
     } else {
-      this.innerHTML = "";
+      this.innerHTML = '';
     }
   }
 }
 
-customElements.define("wind-details", WindDetails);
+customElements.define('wind-details', WindDetails);

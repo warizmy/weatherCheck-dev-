@@ -1,8 +1,4 @@
 class Visibility extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -34,4 +30,4 @@ class Visibility extends HTMLElement {
   }
 }
 
-customElements.define("visibility-details", Visibility);
+customElements.define('visibility-details', Visibility);

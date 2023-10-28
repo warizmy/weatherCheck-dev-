@@ -1,8 +1,4 @@
 class PressureDetails extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -27,4 +23,4 @@ class PressureDetails extends HTMLElement {
   }
 }
 
-customElements.define("pressure-details", PressureDetails);
+customElements.define('pressure-details', PressureDetails);

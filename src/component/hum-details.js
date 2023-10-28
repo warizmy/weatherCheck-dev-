@@ -1,8 +1,4 @@
 class HumDetails extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -27,4 +23,4 @@ class HumDetails extends HTMLElement {
   }
 }
 
-customElements.define("hum-details", HumDetails);
+customElements.define('hum-details', HumDetails);

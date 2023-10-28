@@ -1,8 +1,4 @@
 class TempDetails extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -33,9 +29,9 @@ class TempDetails extends HTMLElement {
         </div>
           `;
     } else {
-      this.innerHTML = "";
+      this.innerHTML = '';
     }
   }
 }
 
-customElements.define("temp-details", TempDetails);
+customElements.define('temp-details', TempDetails);

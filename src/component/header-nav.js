@@ -1,5 +1,3 @@
-import icon from "../assets/icon.png";
-
 class headerNav extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -15,4 +13,4 @@ class headerNav extends HTMLElement {
   }
 }
 
-customElements.define("header-nav", headerNav);
+customElements.define('header-nav', headerNav);

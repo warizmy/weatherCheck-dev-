@@ -1,14 +1,10 @@
-import imageClear from "../assets/clear.png";
-import imageClouds from "../assets/cloud.png";
-import imageHaze from "../assets/haze.png";
-import imageRain from "../assets/rain.png";
-import imageSnow from "../assets/snow.png";
+import imageClear from '../assets/clear.png';
+import imageClouds from '../assets/cloud.png';
+import imageHaze from '../assets/haze.png';
+import imageRain from '../assets/rain.png';
+import imageSnow from '../assets/snow.png';
 
 class WeatherBox extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
     this.setWeatherIcon();
@@ -22,20 +18,22 @@ class WeatherBox extends HTMLElement {
 
   setWeatherIcon() {
     if (this.weatherData) {
-      const weatherIcon = this.querySelector(".row .details-image img");
+      const weatherIcon = this.querySelector('.row .details-image img');
       const weatherDescription = this.weatherData.weather[0].main;
 
       if (weatherIcon) {
-        if (weatherDescription == "Clear") {
-          weatherIcon.setAttribute("src", imageClear);
-        } else if (weatherDescription == "Clouds") {
-          weatherIcon.setAttribute("src", imageClouds);
-        } else if (weatherDescription == "Haze") {
-          weatherIcon.setAttribute("src", imageHaze);
-        } else if (weatherDescription == "Rain") {
-          weatherIcon.setAttribute("src", imageRain);
-        } else if (weatherDescription == "Snow") {
-          weatherIcon.setAttribute("src", imageSnow);
+        if (weatherDescription === 'Clear') {
+          weatherIcon.setAttribute('src', imageClear);
+        } else if (weatherDescription === 'Clouds') {
+          weatherIcon.setAttribute('src', imageClouds);
+        } else if (weatherDescription === 'Haze') {
+          weatherIcon.setAttribute('src', imageHaze);
+        } else if (weatherDescription === 'Rain') {
+          weatherIcon.setAttribute('src', imageRain);
+        } else if (weatherDescription === 'Snow') {
+          weatherIcon.setAttribute('src', imageSnow);
+        } else if (weatherDescription === 'Mist') {
+          weatherIcon.setAttribute('src', imageHaze);
         }
       }
     }
@@ -43,9 +41,9 @@ class WeatherBox extends HTMLElement {
 
   static capitalizeWeatherDescription(description) {
     return description
-      .split(" ")
+      .split(' ')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
+      .join(' ');
   }
 
   render() {
@@ -54,13 +52,13 @@ class WeatherBox extends HTMLElement {
       const cityCountry = this.weatherData.sys.country;
       const temperature = this.weatherData.main.temp.toFixed(0);
       const weatherDescription = this.weatherData.weather[0].main;
-      const capitalizedWeatherDescription =
-        WeatherBox.capitalizeWeatherDescription(weatherDescription);
+      // eslint-disable-next-line max-len
+      const capitalizedWeatherDescription = WeatherBox.capitalizeWeatherDescription(weatherDescription);
 
       const currentDate = new Date();
-      const day = currentDate.toLocaleDateString("en-US", { weekday: "long" });
-      const date = currentDate.toLocaleDateString("en-US", { day: "numeric" });
-      const month = currentDate.toLocaleDateString("en-US", { month: "short" });
+      const day = currentDate.toLocaleDateString('en-US', { weekday: 'long' });
+      const date = currentDate.toLocaleDateString('en-US', { day: 'numeric' });
+      const month = currentDate.toLocaleDateString('en-US', { month: 'short' });
 
       this.innerHTML = `
       <div class="weather-box">
@@ -88,9 +86,9 @@ class WeatherBox extends HTMLElement {
       </div>
       `;
     } else {
-      this.innerHTML = "";
+      this.innerHTML = '';
     }
   }
 }
 
-customElements.define("weather-box", WeatherBox);
+customElements.define('weather-box', WeatherBox);

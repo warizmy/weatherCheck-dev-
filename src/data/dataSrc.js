@@ -1,21 +1,19 @@
-const APIkey = "ba153b72752607d260affc41b1c47565"; // Change this key and Use Your API Key
+const APIkey = 'ba153b72752607d260affc41b1c47565'; // Change this key and Use Your API Key
 
 // Current Weather
 const fetchWeatherData = (city) => {
   const APIurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`;
 
   return fetch(APIurl, {
-    cache: "force-cache",
+    cache: 'force-cache',
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("City not found");
+        throw new Error('City not found');
       }
       return response.json();
     })
-    .then((data) => {
-      return data;
-    })
+    .then((data) => data)
     .catch((error) => {
       throw error;
     });
@@ -26,17 +24,15 @@ const fetchWeatherDataByLocation = (latitude, longitude) => {
   const APIurl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${APIkey}`;
 
   return fetch(APIurl, {
-    cache: "force-cache",
+    cache: 'force-cache',
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Weather data not found");
+        throw new Error('Weather data not found');
       }
       return response.json();
     })
-    .then((data) => {
-      return data;
-    })
+    .then((data) => data)
     .catch((error) => {
       throw error;
     });
@@ -47,17 +43,15 @@ const fetchForecastData = (city) => {
   const APIurl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${APIkey}`;
 
   return fetch(APIurl, {
-    cache: "force-cache",
+    cache: 'force-cache',
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("City not found");
+        throw new Error('City not found');
       }
       return response.json();
     })
-    .then((data) => {
-      return data;
-    })
+    .then((data) => data)
     .catch((error) => {
       throw error;
     });
@@ -68,17 +62,15 @@ const fetchForecastByLocation = (latitude, longitude) => {
   const APIurl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${APIkey}`;
 
   return fetch(APIurl, {
-    cache: "force-cache",
+    cache: 'force-cache',
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Forecast data not found");
+        throw new Error('Forecast data not found');
       }
       return response.json();
     })
-    .then((data) => {
-      return data;
-    })
+    .then((data) => data)
     .catch((error) => {
       throw error;
     });

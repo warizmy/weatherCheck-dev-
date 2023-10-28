@@ -41,4 +41,4 @@ class LoadingCircle extends HTMLElement {
   }
 }
 
-customElements.define("loading-circle", LoadingCircle);
+customElements.define('loading-circle', LoadingCircle);

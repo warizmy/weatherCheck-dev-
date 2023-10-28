@@ -1,8 +1,4 @@
 class FeelsLike extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -27,4 +23,4 @@ class FeelsLike extends HTMLElement {
   }
 }
 
-customElements.define("fl-details", FeelsLike);
+customElements.define('fl-details', FeelsLike);

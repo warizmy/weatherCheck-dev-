@@ -1,8 +1,4 @@
 class SunDetails extends HTMLElement {
-  constructor() {
-    super();
-  }
-
   connectedCallback() {
     this.render();
   }
@@ -13,10 +9,10 @@ class SunDetails extends HTMLElement {
   }
 
   formatTime(timestamp) {
-    const date = new Date(timestamp * 1000); 
+    const date = new Date(timestamp * 1000);
     const hours = date.getHours();
     const minutes = date.getMinutes();
-    const ampm = hours >= 12 ? "PM" : "AM";
+    const ampm = hours >= 12 ? 'PM' : 'AM';
     const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
     const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
     return `${formattedHours}:${formattedMinutes} ${ampm}`;
@@ -43,9 +39,9 @@ class SunDetails extends HTMLElement {
          </div>
          `;
     } else {
-      this.innerHTML = "";
+      this.innerHTML = '';
     }
   }
 }
 
-customElements.define("sun-details", SunDetails);
+customElements.define('sun-details', SunDetails);
