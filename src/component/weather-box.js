@@ -1,8 +1,8 @@
-import imageClear from '../assets/clear.png';
-import imageClouds from '../assets/cloud.png';
-import imageHaze from '../assets/haze.png';
-import imageRain from '../assets/rain.png';
-import imageSnow from '../assets/snow.png';
+import imageClear from '../public/images/clear.png';
+import imageClouds from '../public/images/cloud.png';
+import imageHaze from '../public/images/haze.png';
+import imageRain from '../public/images/rain.png';
+import imageSnow from '../public/images/snow.png';
 
 class WeatherBox extends HTMLElement {
   connectedCallback() {
@@ -66,7 +66,7 @@ class WeatherBox extends HTMLElement {
           <div class="row">
             <p id="temp"><span>${temperature}°c</span></p>
               <div class = "details-image">
-                <img src="" />
+                <img src="" alt = "weather-icon" class="lazyload"/>
               </div>
           </div>
           <div class = cols>

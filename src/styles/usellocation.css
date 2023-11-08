@@ -4,8 +4,8 @@ use-location button {
   border-radius: 100%;
   color: var(--on-surface);
   background-color: #4d3c77;
-  width: 45px;
-  height: 40px;
+  width: 54px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;

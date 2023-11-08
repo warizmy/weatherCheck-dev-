@@ -1,11 +1,8 @@
-/* Media  */
-
 /* Laptop */
 @media (max-width: 1650px) {
-  html {
+  html{
     font-size: 81%;
   }
-
   .navbar {
     justify-content: space-between;
   }
@@ -55,11 +52,7 @@
   }
 }
 
-@media (max-width: 1370px) {
-  html {
-    font-size: 81%;
-  }
-
+@media (max-width: 1370px) { 
   .weather-box {
     width: 350px;
     height: 270px;
@@ -262,6 +255,12 @@
   }
 }
 
+@media (max-width: 600px){
+  .header-nav p{
+    display: none;
+  }
+}
+
 @media (max-width: 450px) {
   html {
     font-size: 65%;
@@ -273,16 +272,16 @@
 
   search-bar .searchContainer {
     padding-left: 1.2rem;
-    padding-right: 1rem;
+    padding-right: 2rem;
   }
 
   search-bar .searchContainer input {
-    width: 110px;
+    width: 200px;
   }
 
   use-location button {
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
   }
 
   use-location button svg {
@@ -368,12 +367,7 @@
 }
 
 @media (max-width: 380px) {
-  search-bar .searchContainer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   search-bar .searchContainer input {
-    width: 100px;
+    width: 180px;
   }
 }

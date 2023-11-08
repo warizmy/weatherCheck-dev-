@@ -19,6 +19,7 @@ search-bar .searchContainer input {
   background-color: var(--surface);
   color: #fff;
   width: 380px;
+  height: 44px;
 }
 
 search-bar .searchContainer button {
@@ -28,6 +29,7 @@ search-bar .searchContainer button {
   cursor: pointer;
   border-radius: 0px 15px 15px 0px;
   background-color: rgb(220, 253, 0);
+  width: 44px;
 }
 
 search-bar .searchContainer button:hover {

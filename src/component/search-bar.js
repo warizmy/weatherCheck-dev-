@@ -18,11 +18,11 @@ class SearchBar extends HTMLElement {
   render() {
     this.innerHTML = `<div id="searchContainer" class="searchContainer"> 
       <input 
-        placeholder = "Enter a City"
+        placeholder = "e.g. London, New York, etc"
         id="searchElement"
         type="search"      
       />
-      <button id="btnSearch" type="submit">&#62;</button>
+      <button id="btnSearch" type="submit" name="Search Button">&#62;</button>
     </div>
     `;
 

@@ -1,3 +1,4 @@
+import 'lazysizes';
 import main from './view/main';
 import './component/weather-box';
 import './component/forecast';
@@ -13,5 +14,6 @@ import './component/pressure-details';
 import './component/visibility-details';
 import './component/feelsLike-details';
 import './component/loading.circle';
+import swRegister from './utils/sw-register';
 
-document.addEventListener('DOMContentLoaded', main);
+document.addEventListener('DOMContentLoaded', main, swRegister);

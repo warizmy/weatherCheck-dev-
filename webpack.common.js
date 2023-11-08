@@ -1,11 +1,12 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -13,10 +14,10 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: "style-loader",
+            loader: 'style-loader',
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
           },
         ],
       },
@@ -24,11 +25,11 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
-            loader: "url-loader",
+            loader: 'url-loader',
             options: {
               limit: 8192,
-              name: "[name].[ext]",
-              outputPath: "./src/assets/",
+              name: '[name].[ext]',
+              outputPath: './src/public/images',
             },
           },
         ],
@@ -37,9 +38,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
-      favicon: "./src/favicon.ico",
+      template: './src/index.html',
+      filename: 'index.html',
+      favicon: './src/public/favicon.ico',
+    }),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: 'https://api.openweathermap.org/data/2.5/weather',
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'openweathermap-api',
+          },
+        },
+      ],
     }),
   ],
 };

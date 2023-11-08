@@ -1,8 +1,8 @@
-import imageClear from '../assets/clear.png';
-import imageClouds from '../assets/cloud.png';
-import imageHaze from '../assets/haze.png';
-import imageRain from '../assets/rain.png';
-import imageSnow from '../assets/snow.png';
+import imageClear from '../public/images/clear.png';
+import imageClouds from '../public/images/cloud.png';
+import imageHaze from '../public/images/haze.png';
+import imageRain from '../public/images/rain.png';
+import imageSnow from '../public/images/snow.png';
 
 class ForeCast extends HTMLElement {
   connectedCallback() {
@@ -101,7 +101,7 @@ class ForeCast extends HTMLElement {
       return `
                 <tr class="forecast-dt-${index + 1}">
                   <td class="flex">
-                    <img src="${weatherIconToImage[weatherIcon]}"> 
+                    <img src="${weatherIconToImage[weatherIcon]}" alt= "weather-icons" class="lazyload"> 
                     <p>${averageTemperature.toFixed(1)}°C</p>
                   </td>
                   <td><p id="date">${date.toLocaleDateString('en-US', {
